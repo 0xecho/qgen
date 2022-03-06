@@ -27,8 +27,8 @@ class Template:
                         }
                     ],
                     "testcases": {
-                            "input_paths": And(list, len, lambda l: all(map(lambda s: s.endswith("in"), l))),
-                            "output_paths": And(list, len, lambda l: all(map(lambda s: s.endswith("out"), l))),
+                            "input_paths": And(list, lambda l: all(map(lambda s: s.endswith("in"), l))),
+                            "output_paths": And(list, lambda l: all(map(lambda s: s.endswith("out"), l))),
                         }
                 }
             ]
