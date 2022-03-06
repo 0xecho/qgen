@@ -40,6 +40,102 @@
                     "testcases/carry/b.out"
                 ]
             }
+        },
+        {
+            "title": "Barber Shop",
+            "short_title": "barber",
+            "time_limit": 1,
+            "uva_id": 10010,
+            "balloon_color": "#ff0000",
+            "body": [
+                "You and your friends were at the barber shop to get your hair cut. While waiting for your turn, you got bored and started reading the newspaper found there. In the news paper, there was a fun puzzle that caught your eye. The puzzle goes like this. ",
+                "You are given a grid with m number of rows and n number of columns. The grid is made up of uppercase and lowercase letters. Your are also given a set of words you need to find in the grid. You can mix up words in upper case and lower case when looking for them. You must find the words uninterrupted and in any of the 8 major directions (up, down, left, right and the 4 diagonals).",
+                "Can you write a program that will help you beat your friends before the barber starts cutting your hair?"
+            ],
+            "input": {
+                "description": "The first line of input contains one integer, T, the number of test cases. Each test case starts with a line containing two integers m and n. The next m lines contain n characters each. The last line of input contains one integer, k, the number of words to be found in the grid. The next k lines contain the words to be found in the grid. Each word is a string of uppercase and lowercase letters. n and m are between 1 and 50 and k in between 1 and 50."
+            },
+            "output": {
+                "description": "For each test case, you must output the two integers i and j that indicate the starting position of the word, where i is the row index starting from 1 and j is the column index starting from 1. If there are multiple words that can be found, output the one with the smallest row index. If multiple words have the same row index, output the one with the smallest column index. You can assume that the words will always be found in the grid."
+            },
+            "samples": [
+                {
+                    "input": [
+                        "1",
+                        "8 11",
+                        "abcDEwGhigg",
+                        "hEbkaaADork",
+                        "FtyAwglNORm",
+                        "Ftsimrnqgrc",
+                        "bybArBeReAv",
+                        "Klcbqwikomd",
+                        "strEBGadhrb",
+                        "yUiqlxcnBjf",
+                        "2",
+                        "Barber",
+                        "Dagnaw"
+                    ],
+                    "output": [
+                        "5 3",
+                        "6 11"
+                    ]
+                }
+            ],
+            "testcases": {
+                "input_paths": [],
+                "output_paths": []
+            }
+        },
+        {
+            "title": "Roundabouts",
+            "short_title": "round",
+            "time_limit": 1,
+            "uva_id": 12582,
+            "balloon_color": "#0000ff",
+            "body": [
+                "Finals are over!!! Hurray!!!",
+                "But now you have all this time on your hands and nothing to do. So you decide to walk outside to clear your head. As you are walking you see a sign that says, 'Park Roundabout', and you decide to go in. As soon as you enter the park you find your self in a round about with multiple roads leading to other roundabouts. You wanted to checkout every roundabout in the park and how well they are connected so you developed a plan to figure that out. You opened your notepad and came up with the following plan",
+                "1. Everytime you ENTER a roundabout for the FIRST time, you write it's name in your note book",
+                "2. Everytime you LEAVE a roundabout for the LAST time, you write it's name in your note book",
+                "3. You never go back to a roundabout you visited while there are unvisited roundabouts you can go from where you are.",
+                "All roundabouts in the park are already given names, which is just a single uppercase letter.",
+                "After you have finished walking through the park, you want to figure out how many roundabouts each round about is connected to.",
+                "For Example: In the image above, the main entrance leads to roundabout A.",
+                "You start from roundabout A and since its the first time you are visitng A, you jot it down in the notepad. Then you can either go to E or B, let's say you went to E. You would jot down E then again choose between F and G. Note that you cannot go back to A because there are previously unvisited roundabouts you can get to from where you are. If you go to F, you write F down. Since there are no more roundabouts from F, you go back to E. The you go to G, jot it down and come back to E. Now that you are done from E, you can go back to A. From A you can get to B. From B you can go to D or C. So let's say you wen to D then back to B then C then B then A. After all this you will find in your notebook: AEFFGGEBDDCCBA."
+            ],
+            "input": {
+                "description": "The first line of input contains one integer, T, the number of test cases. The next T lines contain one string each. Each string contains the name of a roundabout. A name is a single uppercase letter."
+            },
+            "output": {
+                "description": "For each test case, you must output the case number in the format shown below, followed the number of connected roundabouts for each roundabout in a sorter order of the names of the roundabouts."
+            },
+            "samples": [
+                {
+                    "input": [
+                        "2",
+                        "AEFFGGEBDDCCBA",
+                        "ZAABBZ"
+                    ],
+                    "output": [
+                        "Case 1",
+                        "A = 2",
+                        "B = 3",
+                        "C = 1",
+                        "D = 1",
+                        "E = 3",
+                        "F = 1",
+                        "G = 1",
+                        "Case 2",
+                        "A = 1",
+                        "B = 1",
+                        "Z = 2"
+                    ]
+                }
+            ],
+            "testcases": {
+                "input_paths": [],
+                "output_paths": []
+            }
         }
     ]
 }
