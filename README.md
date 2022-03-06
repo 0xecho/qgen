@@ -6,4 +6,6 @@
     python3 main.py generate questions.json
 ```
 - Sample json schema is in `sample.json`
+- Problem set format is in `format/format.docx`
+- Default output path is `output/`
 - Need you to have `libreoffice` installed on your system
