@@ -32,13 +32,11 @@
             "testcases": {
                 "input_paths": [
                     "testcases/carry/a.in",
-                    "testcases/carry/b.in",
-                    "testcases/carry/c.in"
+                    "testcases/carry/b.in"
                 ],
                 "output_paths": [
                     "testcases/carry/a.out",
-                    "testcases/carry/b.out",
-                    "testcases/carry/c.out"
+                    "testcases/carry/b.out"
                 ]
             }
         }

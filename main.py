@@ -21,13 +21,8 @@ class QGen:
         for problem in template.get_problems():
             generator = Generator(problem, format_file)
             pdf_path = generator.generate()
-            print(pdf_path)
-
-        # generator = Generator(template, format_file)
-        # pdf_path = generator.generate()
-        # zipper = Zipper(template, output_path, pdf_path)
-        # zipped_file_path = zipper.zip()
-        # print("Problem generated and saved in: " + zipped_file_path)
-
+            zipper = Zipper(problem, output_path, pdf_path)
+            zipped_file_path = zipper.zip()
+            print("Problem generated and saved in: " + zipped_file_path)
 if __name__ == "__main__":
     fire.Fire(QGen)
