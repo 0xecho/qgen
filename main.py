@@ -1,4 +1,4 @@
-import fire
+import fire, os
 
 from template import Template
 from generator import Generator
@@ -20,6 +20,9 @@ class QGen:
         """
         template = Template(template_path)
         for problem in template.get_problems():
+            if problem["short_title"]+".zip" in os.listdir(output_path):
+                print("Problem already generated: " + problem["short_title"])
+                continue
             generator = Generator(problem, format_file)
             pdf_path = generator.generate()
             
