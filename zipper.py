@@ -9,11 +9,12 @@ class Zipper:
         Output: zipped_file_path
     """
 
-    def __init__(self, problem, output_path, problem_pdf_path):
+    def __init__(self, problem, output_path, problem_pdf_path, additional_test_cases_generator=None):
         self.problem = problem
         self.output_path = output_path
         self.problem_pdf_path = problem_pdf_path
         self.ini_file_name = None
+        self.additional_test_cases_generator = additional_test_cases_generator
     
     def get_ini_file_contents(self):
         lines = [
@@ -53,4 +54,10 @@ class Zipper:
                 zip_file.write(input_file, arcname=io_filename_letter + ".in")
                 zip_file.write(output_file, arcname=io_filename_letter + ".out")
                 io_filename_letter_index += 1
+            if self.additional_test_cases_generator:
+                for input_file, output_file in self.additional_test_cases_generator:
+                    io_filename_letter = chr(ord('a') + io_filename_letter_index)
+                    zip_file.write(input_file, arcname=io_filename_letter + ".in")
+                    zip_file.write(output_file, arcname=io_filename_letter + ".out")
+                    io_filename_letter_index += 1
         return output_file_path

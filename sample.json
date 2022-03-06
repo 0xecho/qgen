@@ -4,6 +4,7 @@
             "title": "Carry",
             "short_title": "carry",
             "time_limit": 1,
+            "uva_id": 10035,
             "balloon_color": "#00ff00",
             "body": [
                 "In kindergarten, children are taught how to add. Once they learn how to add single digit numbers, they move on to numbers with multiple digits. But there is a catch. Sometimes when adding numbers with multiple digits a carry operation occurs. A carry operation is defined as the addition of a digit to the next number if the sum of the digits at the current index is greater than 9. Your task is to compute the number of carry operations for the following addition problems."

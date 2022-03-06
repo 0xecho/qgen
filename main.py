@@ -3,6 +3,7 @@ import fire
 from template import Template
 from generator import Generator
 from zipper import Zipper
+from test_cases import fetch_test_cases
 
 class QGen:
     """
@@ -21,7 +22,12 @@ class QGen:
         for problem in template.get_problems():
             generator = Generator(problem, format_file)
             pdf_path = generator.generate()
-            zipper = Zipper(problem, output_path, pdf_path)
+            
+            additional_test_cases_generator = None
+            if "uva_id" in problem:
+                additional_test_cases_generator = fetch_test_cases(problem["uva_id"])
+
+            zipper = Zipper(problem, output_path, pdf_path, additional_test_cases_generator)
             zipped_file_path = zipper.zip()
             print("Problem generated and saved in: " + zipped_file_path)
 if __name__ == "__main__":

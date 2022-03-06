@@ -11,6 +11,7 @@ class Template:
                     "title": And(str, len),
                     "short_title": And(str, len),
                     "time_limit": And(int, lambda n: n > 0),
+                    Optional("uva_id"): And(int, lambda n: n > 0),
                     "balloon_color": And(str, len),
                     "body": And(list, len),
                     "input": {
